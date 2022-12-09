@@ -1,5 +1,5 @@
 {
-    "taskDefinitionArn": "arn:aws-cn:ecs:cn-north-1:215817895135:task-definition/td-nginx:2",
+    "taskDefinitionArn": "arn:aws-cn:ecs:cn-north-1:215817895135:task-definition/td-nginx:4",
     "containerDefinitions": [
         {
             "name": "cicdtest",
