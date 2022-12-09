@@ -1,9 +1,9 @@
 {
-    "taskDefinitionArn": "arn:aws-cn:ecs:cn-north-1:215817895135:task-definition/td-nginx:4",
+    "taskDefinitionArn": "arn:aws-cn:ecs:cn-north-1:215817895135:task-definition/cicdtest:2",
     "containerDefinitions": [
         {
             "name": "cicdtest",
-            "image": "215817895135.dkr.ecr.cn-north-1.amazonaws.com.cn/cicdtest",
+            "image": "215817895135.dkr.ecr.cn-north-1.amazonaws.com.cn/cicdtest:latest",
             "cpu": 0,
             "links": [],
             "portMappings": [
@@ -30,10 +30,10 @@
             "systemControls": []
         }
     ],
-    "family": "td-nginx",
+    "family": "cicdtest",
     "executionRoleArn": "arn:aws-cn:iam::215817895135:role/ecsTaskExecutionRole",
     "networkMode": "awsvpc",
-    "revision": 2,
+    "revision": 1,
     "volumes": [],
     "status": "ACTIVE",
     "requiresAttributes": [
@@ -63,7 +63,7 @@
     ],
     "cpu": "256",
     "memory": "512",
-    "registeredAt": "2022-12-09T09:46:04.432Z",
+    "registeredAt": "2022-12-09T10:16:28.527Z",
     "registeredBy": "arn:aws-cn:iam::215817895135:user/Railon",
     "tags": [
         {
@@ -72,7 +72,7 @@
         },
         {
             "key": "ecs:taskDefinition:stackId",
-            "value": "arn:aws-cn:cloudformation:cn-north-1:215817895135:stack/ECS-Console-V2-TaskDefinition-9d163e43-53a5-4a1c-8ca2-8c33bb015e13/498e9170-77a6-11ed-bd48-025d38c3f79c"
+            "value": "arn:aws-cn:cloudformation:cn-north-1:215817895135:stack/ECS-Console-V2-TaskDefinition-5946d5e5-8b64-4fbd-b8b4-bfb76a4fbd22/88e77810-77aa-11ed-9bd7-06514f2129ba"
         }
     ]
 }
