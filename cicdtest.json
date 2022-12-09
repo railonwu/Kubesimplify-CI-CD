@@ -1,0 +1,78 @@
+{
+    "taskDefinitionArn": "arn:aws-cn:ecs:cn-north-1:215817895135:task-definition/td-nginx:2",
+    "containerDefinitions": [
+        {
+            "name": "cicdtest",
+            "image": "215817895135.dkr.ecr.cn-north-1.amazonaws.com.cn/cicdtest",
+            "cpu": 0,
+            "links": [],
+            "portMappings": [
+                {
+                    "containerPort": 80,
+                    "hostPort": 80,
+                    "protocol": "tcp"
+                }
+            ],
+            "essential": true,
+            "entryPoint": [],
+            "command": [],
+            "environment": [],
+            "environmentFiles": [],
+            "mountPoints": [],
+            "volumesFrom": [],
+            "secrets": [],
+            "dnsServers": [],
+            "dnsSearchDomains": [],
+            "extraHosts": [],
+            "dockerSecurityOptions": [],
+            "dockerLabels": {},
+            "ulimits": [],
+            "systemControls": []
+        }
+    ],
+    "family": "td-nginx",
+    "executionRoleArn": "arn:aws-cn:iam::215817895135:role/ecsTaskExecutionRole",
+    "networkMode": "awsvpc",
+    "revision": 2,
+    "volumes": [],
+    "status": "ACTIVE",
+    "requiresAttributes": [
+        {
+            "name": "com.amazonaws.ecs.capability.ecr-auth"
+        },
+        {
+            "name": "com.amazonaws.ecs.capability.docker-remote-api.1.17"
+        },
+        {
+            "name": "ecs.capability.execution-role-ecr-pull"
+        },
+        {
+            "name": "com.amazonaws.ecs.capability.docker-remote-api.1.18"
+        },
+        {
+            "name": "ecs.capability.task-eni"
+        }
+    ],
+    "placementConstraints": [],
+    "compatibilities": [
+        "EC2",
+        "FARGATE"
+    ],
+    "requiresCompatibilities": [
+        "FARGATE"
+    ],
+    "cpu": "256",
+    "memory": "512",
+    "registeredAt": "2022-12-09T09:46:04.432Z",
+    "registeredBy": "arn:aws-cn:iam::215817895135:user/Railon",
+    "tags": [
+        {
+            "key": "ecs:taskDefinition:createdFrom",
+            "value": "ecs-console-v2"
+        },
+        {
+            "key": "ecs:taskDefinition:stackId",
+            "value": "arn:aws-cn:cloudformation:cn-north-1:215817895135:stack/ECS-Console-V2-TaskDefinition-9d163e43-53a5-4a1c-8ca2-8c33bb015e13/498e9170-77a6-11ed-bd48-025d38c3f79c"
+        }
+    ]
+}
