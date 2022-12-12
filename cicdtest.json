@@ -1,5 +1,5 @@
 {
-    "taskDefinitionArn": "arn:aws-cn:ecs:cn-north-1:215817895135:task-definition/cicdtest:2",
+    "taskDefinitionArn": "arn:aws-cn:ecs:cn-north-1:215817895135:task-definition/cicdtest:4",
     "containerDefinitions": [
         {
             "name": "cicdtest",
@@ -27,18 +27,37 @@
             "dockerSecurityOptions": [],
             "dockerLabels": {},
             "ulimits": [],
+            "logConfiguration": {
+                "logDriver": "awslogs",
+                "options": {
+                    "awslogs-create-group": "true",
+                    "awslogs-group": "/ecs/cicdtest",
+                    "awslogs-region": "cn-north-1",
+                    "awslogs-stream-prefix": "ecs"
+                },
+                "secretOptions": []
+            },
             "systemControls": []
         }
     ],
     "family": "cicdtest",
     "executionRoleArn": "arn:aws-cn:iam::215817895135:role/ecsTaskExecutionRole",
     "networkMode": "awsvpc",
-    "revision": 1,
+    "revision": 3,
     "volumes": [],
     "status": "ACTIVE",
     "requiresAttributes": [
         {
+            "name": "com.amazonaws.ecs.capability.logging-driver.awslogs"
+        },
+        {
+            "name": "ecs.capability.execution-role-awslogs"
+        },
+        {
             "name": "com.amazonaws.ecs.capability.ecr-auth"
+        },
+        {
+            "name": "com.amazonaws.ecs.capability.docker-remote-api.1.19"
         },
         {
             "name": "com.amazonaws.ecs.capability.docker-remote-api.1.17"
@@ -51,6 +70,9 @@
         },
         {
             "name": "ecs.capability.task-eni"
+        },
+        {
+            "name": "com.amazonaws.ecs.capability.docker-remote-api.1.29"
         }
     ],
     "placementConstraints": [],
@@ -63,7 +85,7 @@
     ],
     "cpu": "256",
     "memory": "512",
-    "registeredAt": "2022-12-09T10:16:28.527Z",
+    "registeredAt": "2022-12-12T02:14:54.396Z",
     "registeredBy": "arn:aws-cn:iam::215817895135:user/Railon",
     "tags": [
         {
@@ -72,7 +94,7 @@
         },
         {
             "key": "ecs:taskDefinition:stackId",
-            "value": "arn:aws-cn:cloudformation:cn-north-1:215817895135:stack/ECS-Console-V2-TaskDefinition-5946d5e5-8b64-4fbd-b8b4-bfb76a4fbd22/88e77810-77aa-11ed-9bd7-06514f2129ba"
+            "value": "arn:aws-cn:cloudformation:cn-north-1:215817895135:stack/ECS-Console-V2-TaskDefinition-e7030931-92aa-41f9-abdc-7fd61ec673e0/c209ec80-79c2-11ed-b616-022ecf7bbcc4"
         }
     ]
 }
